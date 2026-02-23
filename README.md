@@ -1,30 +1,24 @@
-<p align="center">
-  <a href="https://buildwithfern.com">
+<br/>
+<div align="center">
+  <a href="https://www.buildwithfern.com/?utm_source=github&utm_medium=readme&utm_campaign=setup-fern-cli&utm_content=logo">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/dugofqzck/image/upload/v1687829491/fern/intro-fern-dark_zirnuq.png" />
-      <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/dugofqzck/image/upload/v1687829489/fern/intro-fern-light_nkwbf7.png" />
-      <img alt="Fern" src="https://res.cloudinary.com/dugofqzck/image/upload/v1687829489/fern/intro-fern-light_nkwbf7.png" width="300" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fern-api/fern/main/fern/images/logo-white.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/fern-api/fern/main/fern/images/logo-primary.svg">
+      <img alt="logo" src="https://raw.githubusercontent.com/fern-api/fern/main/fern/images/logo-primary.svg" height="80" align="center">
     </picture>
   </a>
-</p>
+<br/>
 
-<p align="center">
-  <a href="https://github.com/fern-api/setup-fern-cli/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-Apache%202.0-blue" alt="Apache 2.0 license" />
-  </a>
-  <a href="https://github.com/marketplace/actions/setup-fern-cli">
-    <img src="https://img.shields.io/badge/GitHub%20Marketplace-Setup%20Fern%20CLI-green" alt="GitHub Marketplace" />
-  </a>
-  <a href="https://discord.com/invite/JkkXumPzcG">
-    <img src="https://img.shields.io/badge/discord-join-7289DA?logo=discord&logoColor=white&labelColor=7289DA" alt="Join Discord" />
-  </a>
-</p>
+<br/>
 
-<p align="center">
-  A GitHub Action that installs the <a href="https://github.com/fern-api/fern">Fern CLI</a> in your workflow — so you can generate SDKs and docs on every push.
-</p>
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+[![Documentation](https://img.shields.io/badge/Read%20our%20Documentation-black?logo=book)](https://buildwithfern.com/learn/home?utm_source=fern-api/setup-fern-cli/readme-read-our-documentation)
 
----
+</div>
+
+# 🌿 setup-fern-cli
+
+A GitHub Action that installs the [Fern CLI](https://github.com/fern-api/fern) in your workflow — so you can generate SDKs and docs on every push.
 
 ## Requirements
 
@@ -93,7 +87,3 @@ gh release create v1.0.1 --generate-notes
 The [release workflow](.github/workflows/release.yml) automatically moves the major version tag (e.g. `v1`) to the new release so users pinned to `@v1` get the update immediately.
 
 ---
-
-<p align="center">
-  Built with 🌿 by <a href="https://buildwithfern.com">Fern</a>
-</p>
