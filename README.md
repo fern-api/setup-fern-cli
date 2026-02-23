@@ -11,6 +11,7 @@
 
 <br/>
 
+[![GitHub Marketplace](https://img.shields.io/badge/GitHub%20Marketplace-Setup%20Fern%20CLI-blue?logo=github)](https://github.com/marketplace/actions/setup-fern-cli)
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 [![Documentation](https://img.shields.io/badge/Read%20our%20Documentation-black?logo=book)](https://buildwithfern.com/learn/home?utm_source=fern-api/setup-fern-cli/readme-read-our-documentation)
 
