@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+      - name: Install actionlint
+        env:
+          ACTIONLINT_VERSION: "1.7.11"
+        run: |
+          curl -fsSL "https://github.com/rhysd/actionlint/releases/download/v${ACTIONLINT_VERSION}/actionlint_${ACTIONLINT_VERSION}_linux_amd64.tar.gz" \
+            | tar -xz actionlint
+          echo "$PWD" >> "$GITHUB_PATH"
+
+      - name: Lint workflows
+        run: actionlint
+
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - version: latest
+          - version: "3.81.0"
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238  # v6.2.0
+        with:
+          node-version: lts/*
+
+      - name: Run action
+        uses: ./
+        with:
+          version: ${{ matrix.version }}
+
+      - name: Verify fern is on PATH
+        run: fern --version

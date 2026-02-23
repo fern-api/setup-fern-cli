@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.7/.schema/devbox.schema.json",
+  "packages": ["actionlint@1.7.10", "act@0.2.84"],
+  "shell": {
+    "scripts": {
+      "lint": "actionlint",
+      "ci": "act push --workflows .github/workflows/ci.yml -P ubuntu-24.04=ghcr.io/catthehacker/ubuntu:act-24.04 --container-architecture linux/amd64 --pull=false --concurrent-jobs 1"
+    }
+  }
+}
