@@ -34,13 +34,15 @@ Use the major version tag (e.g. `@v1`) to automatically receive the latest updat
   with:
     node-version: "lts/*"
 
-- uses: fern-api/setup-fern-cli@v1
+- name: Setup Fern CLI
+  uses: fern-api/setup-fern-cli@v1
 ```
 
 ### With a specific version
 
 ```yaml
-- uses: fern-api/setup-fern-cli@v1
+- name: Setup Fern CLI
+  uses: fern-api/setup-fern-cli@v1
   with:
     version: "3.81.0"
 ```
@@ -70,7 +72,8 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - uses: fern-api/setup-fern-cli@v1
+      - name: Setup Fern CLI
+        uses: fern-api/setup-fern-cli@v1
 
       - run: fern generate
 ```
