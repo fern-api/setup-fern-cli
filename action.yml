@@ -1,7 +1,7 @@
 name: Setup Fern CLI
 description: Install and configure the Fern CLI in your GitHub Actions workflow
 branding:
-  icon: package
+  icon: terminal
   color: green
 
 inputs:
