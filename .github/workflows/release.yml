@@ -26,7 +26,7 @@ jobs:
             exit 0
           fi
 
-          STRIPPED="$(echo "$VERSION" | sed 's/^v//')"
+          STRIPPED="${VERSION#v}"
           PARTS="$(echo "$STRIPPED" | tr '.' '\n' | wc -l)"
           MAJOR="v$(echo "$STRIPPED" | cut -d. -f1)"
 
